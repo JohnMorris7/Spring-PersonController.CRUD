@@ -21,9 +21,9 @@ Add the `@RestController` annotation to your `PersonController` class, and using
 
 Add the `@Entity` and `@Id` annotations to your Person class as shown in the Reference section. These tell Spring how to convert your Person objects to database entities when you pass them to a repository.
 
-Create a `PersonRepository` interface that extends the `CrudRepository` interface. Be sure to specify the `Person` type parameter on `CrudRepository<>`. You will not need to implement this interface as Spring automatically generates an implementation at runtime.
+Create a `repository` interface that extends the `CrudRepository` interface. Be sure to specify the `Person` type parameter on `CrudRepository<>`. You will not need to implement this interface as Spring automatically generates an implementation at runtime.
 
-Update your controller logic to use the `PersonRepository` instead of manually tracking Person objects in a list. You will need a `PersonRepository` field marked with the `@Autowired` annotation -- again, Spring will provide an implementation here automatically. You will need to use the `findAll()`, `findOne(id)`, `save(Person)` and `delete(id)` methods of `PersonRepository` to fetch and save Person objects.
+Update your controller logic to use the `repository` instead of manually tracking Person objects in a list. You will need a `repository` field marked with the `@Autowired` annotation -- again, Spring will provide an implementation here automatically. You will need to use the `findAll()`, `findOne(id)`, `save(Person)` and `delete(id)` methods of `repository` to fetch and save Person objects.
 
 ### Part 3:
 
